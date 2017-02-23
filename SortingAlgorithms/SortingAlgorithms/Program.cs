@@ -8,13 +8,17 @@ namespace SortingAlgorithms
 {
     class Program
     {
-        static Random random = new Random();
+        Random random = new Random();
+        int[] notSorted = new int[10];
         static void Main(string[] args)
+        {
+            Program myProgram = new Program();
+            myProgram.TryInsertionSort();
+        }
+        public void TryInsertionSort()
         {
             InsertionSorting Insertion = new InsertionSorting();
             
-            int[] notSorted = new int[10];
-
             for (int i = 0; i < notSorted.Length; i++)
             {
                 int value = random.Next(1, 5000);
@@ -28,6 +32,14 @@ namespace SortingAlgorithms
                 Console.WriteLine(notSorted[i]);
             }
             Console.ReadKey();
+        }
+        public void TryQuickSort()
+        {
+
+        }
+        public void TryMergeSort()
+        {
+
         }
     }
 }
