@@ -14,7 +14,6 @@ namespace SortingAlgorithms
             InsertionSorting Insertion = new InsertionSorting();
             
             int[] notSorted = new int[10];
-            int[] Sorted = new int[10];
 
             for (int i = 0; i < notSorted.Length; i++)
             {
