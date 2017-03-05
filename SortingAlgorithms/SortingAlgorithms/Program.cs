@@ -13,7 +13,9 @@ namespace SortingAlgorithms
         static void Main(string[] args)
         {
             Program myProgram = new Program();
-            myProgram.TryInsertionSort();
+            //myProgram.TryInsertionSort();
+            //myProgram.TryQuickSort();
+            myProgram.TryMergeSort();
         }
         public void TryInsertionSort()
         {
@@ -24,7 +26,7 @@ namespace SortingAlgorithms
                 int value = random.Next(1, 5000);
                 notSorted[i] = value;
             }
-            Insertion.Sort(notSorted);
+            Insertion.DoInsertionSort(notSorted);
 
             Console.WriteLine("==========Integer Array OutPut===============");
             for (int i = 0; i < notSorted.Length; i++)
@@ -39,7 +41,20 @@ namespace SortingAlgorithms
         }
         public void TryMergeSort()
         {
+            MergeSort Merging = new MergeSort();
 
+            for (int i = 0; i < notSorted.Length; i++)
+            {
+                int value = random.Next(1, 5000);
+                notSorted[i] = value;
+            }
+            Merging.RecursiveMergeSort(notSorted, 0, notSorted.Length - 1);
+            Console.WriteLine("==========Integer Array OutPut===============");
+            for (int i = 0; i < notSorted.Length; i++)
+            {
+                Console.WriteLine(notSorted[i]);
+            }
+            Console.ReadKey();
         }
     }
 }

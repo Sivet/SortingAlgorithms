@@ -8,7 +8,7 @@ namespace SortingAlgorithms
 {
     class InsertionSorting
     {
-        public int[] Sort(int[] notSorted)
+        public int[] DoInsertionSort(int[] notSorted)
         {
             int temp, index;
             for (int i = 1; i < notSorted.Length; i++)
